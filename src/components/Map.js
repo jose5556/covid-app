@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import L, { map } from 'leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const Map = () => {
