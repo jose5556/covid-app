@@ -16,13 +16,14 @@ function CountryApi() {
                 const country = [];
                 const cases = [];
                 const flag = [];
-                
+
                 data.forEach((apiData) => {
                     country.push(apiData.country)
                     cases.push(apiData.cases)
                     flag.push(apiData.countryInfo.flag)
 
                 })
+
                 setCovidCountries(country);
                 setCases(cases);
                 setFlags(flag)
@@ -31,7 +32,6 @@ function CountryApi() {
             .catch((error) => {
                 console.error("Error in CountryApi:", error)
             })
-
     }, [covidApi])
     return (
         <div>CountryApi</div>
