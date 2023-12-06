@@ -1,6 +1,6 @@
 import './App.css';
 import Map from './components/Map.js'
-import CountryApi from './Service/CountryApi.js'
+import Navbar from './components/CovidNavbar.js';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Map />
-      <CountryApi />
+      <CovidNavbar />
     </div>
   );
 }
