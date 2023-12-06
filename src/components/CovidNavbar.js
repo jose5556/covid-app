@@ -1,11 +1,11 @@
 import React from 'react'
 import '../App.css';
 
-function CovidNavbar(props) {
+function CovidNavbar() {
 
   return (
     <div className='sideBar' style={{ width: '25%', paddingTop: '20px'}}>
-       <a href="#section">{props.name} </a>
+       <a href="#section"></a>
     </div>
   )
   

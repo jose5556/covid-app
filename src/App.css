@@ -5,7 +5,7 @@
     z-index: 1; 
     top: 0; 
     left: 0; 
-    background-color:#232323; 
+    background-color:white; 
     transition: .5s ease; 
     overflow-x: hidden; 
     padding-top: 20px; 
@@ -13,3 +13,10 @@
     flex-direction: column; 
     align-items: center;
 }
+
+.map {
+    width: 75%; /* 100% menos a largura da barra de navegação */
+    height: 100vh; /* Ou a altura desejada */
+    margin-left: 25%; /* Largura da barra de navegação */
+    float: right; /* Move o mapa para a direita */
+  }

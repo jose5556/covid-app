@@ -9,9 +9,11 @@ function App() {
   return (
     <div className="App">
       <div className='navBar'>
-        <CovidNavbar name='jose'/>
+        <CovidNavbar />
       </div>
-      <Map />
+      <div className='map'>
+        <Map />
+      </div>
     </div>
   );
 }
