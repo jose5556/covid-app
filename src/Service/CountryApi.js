@@ -1,32 +1,25 @@
 import React from 'react'
+import CovidNavbar from '../components/CovidNavbar';
 import { useEffect, useState } from 'react'
 
 function CountryApi() {
 
     const covidApi = "https://disease.sh/v3/covid-19/countries";
-    const [covidCountries, setCovidCountries] = useState([]);
-    const [cases, setCases] = useState([]);
-    const [flags, setFlags] = useState([]);
-
+    const [countriesData, setCountriesData] = useState([]);
 
     useEffect(() => {
         fetch(covidApi)
             .then((response) => response.json())
             .then((data) => {
-                const country = [];
-                const cases = [];
-                const flag = [];
+                console.log(data)
 
-                data.forEach((apiData) => {
-                    country.push(apiData.country)
-                    cases.push(apiData.cases)
-                    flag.push(apiData.countryInfo.flag)
+                const countryInformationCovid = data.map((covidData) => ({
+                    cases: covidData.cases,
+                    country: covidData.country,
+                    flag: covidData.flag,
+                }));
 
-                })
-
-                setCovidCountries(country);
-                setCases(cases);
-                setFlags(flag)
+                setCountriesData(countryInformationCovid);
             })
 
             .catch((error) => {
@@ -34,7 +27,7 @@ function CountryApi() {
             })
     }, [covidApi])
     return (
-        <div>CountryApi</div>
+        <CovidNavbar countriesData={countriesData} />
     )
 }
 
