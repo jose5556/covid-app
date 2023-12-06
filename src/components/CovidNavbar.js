@@ -3,8 +3,9 @@ import '../App.css';
 
 function CovidNavbar({ countriesData }) {
 
-  if (!Array.isArray(countriesData)) {
-    return <div>No data available</div>; // Ou algo semelhante para lidar com a ausência de dados
+
+  if (!countriesData) {
+    return <div>Nothing here my friend</div>;
   }
 
   return (
@@ -16,6 +17,7 @@ function CovidNavbar({ countriesData }) {
       </div>
     ))}
   </div>
+
   )
   
 }

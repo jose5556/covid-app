@@ -1,4 +1,4 @@
-.navBar {
+.navbar {
     height: 100%;  
     width: 25%;  
     position: fixed; 
@@ -15,8 +15,8 @@
 }
 
 .map {
-    width: 75%; /* 100% menos a largura da barra de navegação */
-    height: 100vh; /* Ou a altura desejada */
-    margin-left: 25%; /* Largura da barra de navegação */
-    float: right; /* Move o mapa para a direita */
+    width: 75%; 
+    height: 100vh; 
+    margin-left: 25%; 
+    float: right; 
   }
