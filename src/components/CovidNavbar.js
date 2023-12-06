@@ -1,10 +1,14 @@
 import React from 'react'
+import '../App.css';
 
+function CovidNavbar(props) {
 
-function CovidNavbar() {
   return (
-    <CovidNavbar />
+    <div className='sideBar' style={{ width: '25%', paddingTop: '20px'}}>
+       <a href="#section">{props.name} </a>
+    </div>
   )
+  
 }
 
 export default CovidNavbar
