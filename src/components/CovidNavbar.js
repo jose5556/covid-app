@@ -9,7 +9,7 @@ function CovidNavbar({ countriesData }) {
   }
 
   return (
-    <div className='sideBar' style={{ width: '15%', paddingTop: '20px' }}>
+    <div className='navbar' style={{ width: '25%', paddingTop: '20px' }}>
 
       <div>{countriesData.reduce((total, data) => total + data.cases, 0)}</div>
 
