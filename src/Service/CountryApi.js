@@ -24,7 +24,6 @@ function CountryApi() {
                 console.error("Error in CountryApi:", error)
             })
 
-
     }, [covidApi]);
     return (
         <div>
