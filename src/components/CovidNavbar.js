@@ -3,14 +3,12 @@ import '../App.css';
 
 function CovidNavbar({ countriesData }) {
 
-
-  if (!countriesData) {
+  if (!countriesData || countriesData.length < 0) {
     return <div>Nothing here my friend</div>;
   }
 
   return (
-    <div className='navbar' style={{ width: '25%', paddingTop: '20px' }}>
-
+    <div>
       <div>{countriesData.reduce((total, data) => total + data.cases, 0)}</div>
 
       {countriesData.map((data, index) => (

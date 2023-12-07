@@ -10,6 +10,7 @@ function CountryApi() {
         fetch(covidApi)
             .then((response) => response.json())
             .then((data) => {
+
                 const countryInformationCovid = data.map((covidData) => ({
                     cases: covidData.cases,
                     country: covidData.country,
@@ -23,7 +24,7 @@ function CountryApi() {
                 console.error("Error in CountryApi:", error)
             })
 
-            
+
     }, [covidApi]);
     return (
         <div>
