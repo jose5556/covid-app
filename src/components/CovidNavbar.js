@@ -9,17 +9,19 @@ function CovidNavbar({ countriesData }) {
   }
 
   return (
-    <div className='sideBar' style={{ width: '25%', paddingTop: '20px'}}>
-    {countriesData.map((data, index) => (
-      <div key={index}>
-        <p>{data.cases} in {data.country}</p>
-        <img src={data.flag} alt={`Flag ${index}`} style={{ width: '50px', height: 'auto', marginBottom: '10px' }} />
-      </div>
-    ))}
-  </div>
+    <div className='sideBar' style={{ width: '15%', paddingTop: '20px' }}>
 
+      <div>{countriesData.reduce((total, data) => total + data.cases, 0)}</div>
+
+      {countriesData.map((data, index) => (
+        <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
+          <p style={{ marginRight: '10px' }}>{data.cases} in {data.country}</p>
+          <img src={data.flag} alt={`Flag ${index}`} style={{ width: '23px', height: 'auto' }} />
+        </div>
+      ))}
+    </div>
   )
-  
+
 }
 
 export default CovidNavbar

@@ -10,8 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <CountryApi />
       <div className='navbar'>
+      <CountryApi />
         <CovidNavbar />
       </div>
       <div className='map'>

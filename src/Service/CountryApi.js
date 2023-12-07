@@ -4,7 +4,7 @@ import CovidNavbar from '../components/CovidNavbar';
 function CountryApi() {
 
     const [countriesData, setCountriesData] = useState([]);
-    const covidApi = "https://disease.sh/v3/covid-19/countries";
+    const covidApi = "https://disease.sh/v3/covid-19/countries?sort=cases";
 
     useEffect(() => {
         fetch(covidApi)
@@ -22,6 +22,8 @@ function CountryApi() {
             .catch((error) => {
                 console.error("Error in CountryApi:", error)
             })
+
+            
     }, [covidApi]);
     return (
         <div>
