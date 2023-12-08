@@ -27,7 +27,6 @@ function CountryApi() {
     }, [covidApi]);
     return (
         <div>
-            {console.log("Countries data:", countriesData)}
             <CovidNavbar countriesData={countriesData} />
         </div>
     )

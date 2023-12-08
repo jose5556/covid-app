@@ -4,7 +4,6 @@ import CovidNavbar from './components/CovidNavbar.js';
 import CountryApi from './Service/CountryApi.js';
 
 
-
 function App() {
 
 
