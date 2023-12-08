@@ -1,32 +1,36 @@
-import React from 'react';
-import { Line } from 'react-chartjs-2';
-
-const data = {
-  labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
-  datasets: [
-    {
-      label: 'Meu Gráfico',
-      data: [12, 19, 3, 5, 2, 3],
-      fill: true,
-      backgroundColor: 'rgba(0, 0, 255, 0.2)', // Cor do preenchimento em azul com transparência
-      borderColor: 'blue', // Cor da linha azul
-    },
-  ],
-};
-
-const options = {
-  scales: {
-    y: {
-      beginAtZero: true,
-    },
-  },
-};
+import React, { useEffect, useRef } from 'react';
+import Chart from 'chart.js/auto';
 
 const LineChart = () => {
+  const chartRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = chartRef.current.getContext('2d');
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: 'Example Dataset',
+          data: [65, 59, 80, 81, 56, 55, 40],
+          borderColor: 'rgba(75, 192, 192, 1)',
+          tension: 0.1,
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }, []);
+
   return (
-    <div>
-      <h2>Gráfico de Linha Preenchido</h2>
-      <Line data={data} options={options} />
+    <div className="line-chart">
+      <canvas ref={chartRef}></canvas>
     </div>
   );
 };

@@ -1,3 +1,8 @@
+.app {
+    display: flex;
+  }
+
+
 .navbar {
     height: 100%;  
     width: 25%;  
@@ -19,4 +24,9 @@
     height: 100vh; 
     margin-left: 25%; 
     float: right; 
+  }
+
+  .graphic {
+    margin-left: 2%; 
+
   }
