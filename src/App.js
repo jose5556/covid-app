@@ -2,7 +2,6 @@ import './App.css';
 import Map from './components/Map.js'
 import CovidNavbar from './components/CovidNavbar.js';
 import CountryApi from './Service/CountryApi.js';
-import LineChart from './components/LineChart.js';
 import CasesApi from './Service/CasesApi.js';
 
 
@@ -19,7 +18,7 @@ function App() {
         <Map />
       <div className='graphic'>
         <CasesApi />
-        <LineChart />
+        
       </div>
       </div>
     </div>
