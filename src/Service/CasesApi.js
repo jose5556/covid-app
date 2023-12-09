@@ -16,7 +16,7 @@ function CasesApi() {
           console.log(casesData); 
           setNumCases(casesData);
         } else {
-          throw new Error('Data or cases not found');
+          throw new Error('Data in CasesApi Not here my friend');
         }
       })
       .catch((error) => {
