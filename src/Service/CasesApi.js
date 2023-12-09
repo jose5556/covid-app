@@ -1,29 +1,31 @@
 import React, { useEffect, useState } from 'react'
+import LineChart from '../components/LineChart';
 
 function CasesApi() {
 
-  const casesDeathApi = "https://disease.sh/v3/covid-19/historical/all?lastdays=all";
-  const [numCases, setNumCases] = useEffect([]);
+  const Api = "https://disease.sh/v3/covid-19/historical/all?lastdays=all";
+  const [numCases, setNumCases] = useState([]);
 
   useEffect(() => {
-    fetch(casesDeathApi)
-    .then((response) => response.json())
-    .then((data) => {
-
-      const cases = data.map((index) => {
-        if (data || data.length > 0) {
-          return index.cases;
-        }
+    fetch(Api)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        const cases = data.map((index) => {      
+            return index.cases;
+          
+        })
+        setNumCases(cases);
       })
-      setNumCases(cases);
-    })
-    .catch((error) => {
-      console.error("CasesApi is not working fine", error)
-    }) 
-  })
+      .catch((error) => {
+        console.error("CasesApi is not working fine", error)
+      })
+  }, [Api]);
 
   return (
-    <div>CasesApi</div>
+    <div>
+      <LineChart numCases={numCases} />
+    </div>
   )
 }
 
