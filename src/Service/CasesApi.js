@@ -14,7 +14,7 @@ function CasesApi() {
             date,
             count: data.cases[date],
           }));
-          console.log(casesData);
+          
           setNumCases(casesData);
         } else {
           throw new Error('Data in CasesApi Not here my friend');
