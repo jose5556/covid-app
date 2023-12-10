@@ -12,8 +12,9 @@ function CasesApi() {
         if (data && data.cases) {
           const casesData = Object.keys(data.cases).map((date) => ({
             date,
+            count: data.cases[date],
           }));
-          console.log(casesData); 
+          console.log(casesData);
           setNumCases(casesData);
         } else {
           throw new Error('Data in CasesApi Not here my friend');
@@ -21,7 +22,7 @@ function CasesApi() {
       })
       .catch((error) => {
         console.error('CasesApi is not working fine', error);
-      
+
       });
   }, [Api]);
 
