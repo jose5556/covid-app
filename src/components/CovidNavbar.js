@@ -8,11 +8,15 @@ function CovidNavbar({ countriesData }) {
 
   return (
     <div>
-      <div>{countriesData.reduce((total, data) => total + data.cases, 0)}</div>
+      <div
+        style={{ textAlign: 'center', marginBottom: '10px' }}> 
+        {countriesData.reduce((total, data) => total + data.cases, 0)}
+      </div>
+
 
       <div class="input-container">
         <button class="square-button">up</button>
-        <input type="text" class="input-field" placeholder="Search for the country"></input>
+        <input type="text" class="input-field" placeholder="Search..."></input>
       </div>
 
       {
