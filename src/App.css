@@ -32,3 +32,34 @@
     margin-left: 2%; 
 
   }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; 
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+  }
+  
+  .input-field {
+    width: 75%; /* Define que o input ocupará 75% do espaço do container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Arredonda a borda esquerda */
+    outline: none;
+  }
+  
+  .square-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0; /* Arredonda a borda direita */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .square-button:hover {
+    background-color: #0056b3;
+  }
+  
