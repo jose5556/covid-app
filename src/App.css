@@ -55,7 +55,7 @@
     background-color: #303131;
     color: white;
     border: none;
-    border-radius: 0 5px 5px 0; /* Arredonda a borda direita */
+    border-radius: 0 5px 5px 0; 
     cursor: pointer;
     transition: background-color 0.3s;
   }
