@@ -3,26 +3,21 @@ import '../App.css';
 
 function CovidNavbar({ countriesData }) {
   const [input, setInput] = useState("");
-  
-  if (!countriesData || countriesData.length === 0) {
-    return;
-  }
 
   const handleChange = e => {
     setInput(e.target.value);
-    console.log(setInput)
   };
 
   let filteredCountries = countriesData;
 
-  if (input.trim() !== "") {
+  if (input !== "") {
     filteredCountries = countriesData.filter(data =>
       data.country.toLowerCase().includes(input.toLowerCase())
     );
   }
 
   return (
-    <div>
+    <>
       <div style={{ textAlign: 'center', marginBottom: '10px' }}>
         {filteredCountries.reduce((total, data) => total + data.cases, 0)}
       </div>
@@ -58,10 +53,12 @@ function CovidNavbar({ countriesData }) {
           />
         </div>
       ))}
-    </div>
+</>
+    
   );
 }
-
 export default CovidNavbar;
+
+//fragments react ( <> )
 
 
