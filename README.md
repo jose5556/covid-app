@@ -1,46 +1,67 @@
-# COVID-19 Tracker Web Application
+ <h1 align="center"> 🌍
+  COVID-19 Tracker 
+</h1> 
 
-## Overview
-This is a simple web application built with React that provides real-time COVID-19 data using an API. The application allows users to track the number of COVID-19 cases in all registered countries and provides a graphical representation to simplify visualization.
+<p align="center"> 
+  <img alt="Code bytes" src="https://img.shields.io/github/languages/code-size/jose5556/covid-app?color=lightblue" /> 
+  <img alt="Code language" src="https://img.shields.io/github/languages/count/jose5556/covid-app?color=yellow" /> 
+  <img alt="Top language" src="https://img.shields.io/github/languages/top/jose5556/covid-app?color=blue" /> 
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/jose5556/covid-app?color=green" /> 
+</p>
 
-## Features
-    Display real-time COVID-19 data for all registered countries.
-    Graphical representation of COVID-19 cases for easy visualization.
-    Responsive design for optimal viewing on desktop and mobile devices.
-## Technologies Used
+# 💡 About the project
+
+A web application built with React that displays the number of COVID-19 cases per country during the peak of the pandemic.
+The data is fetched from a public API and visualized through charts and a responsive UI.
+
+# 🔍 Overview
+<br>
+
+![Screenshot of the Project](/src/covid-visualizer.png)
+
+## 🚀 Features
+
+    📈 Live data for all countries
+
+    🌐 Country selector to view individual stats
+
+    📊 Charts for visualizing total cases, recoveries, and deaths
+
+    🔍 Search functionality
+
+
+## 🛠️ Tech Stack
 
     React
-    JavaScript
+
+    Node.js
+
+    Fetch (API calls)
+
     CSS
-    COVID-19 API
-    tileLayer API
-    
-## Available Scripts
 
-In the project directory, you can run:
+    npm
 
-### `npm start`
+## 📦 Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
+Clone the repository and install the dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```shell
+$ git clone git@github.com:jose5556/covid-app.git
+$ cd covid-app
+$ npm install
+```
 
-### `npm run build`
+To run the app locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```shell
+$ npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app will run on:
+👉 http://localhost:3000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📌 Note
 
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
+- This is a front-end only application.
+- Feel free to fork this project, customize it, and make it your own productivity tool 🛠️✨
