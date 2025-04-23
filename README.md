@@ -34,8 +34,6 @@ The data is fetched from a public API and visualized through charts and a respon
 
     React
 
-    Node.js
-
     Fetch (API calls)
 
     CSS
